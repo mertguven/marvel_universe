@@ -1,0 +1,14 @@
+{
+    "somethingWentWrong": "Bir şeyler yanlış gitti! Tekrar deneyin!",
+    "error":"Hata",
+    "pageNotFound":"Sayfa bulunamadı",
+    "characters":{
+        "characterName": "Karakter Adı"
+    },
+    "characterDetail":{
+        "description":"Açıklama",
+        "noDescription":"Açıklama yok",
+        "comics":"Çizgi Romanlar",
+        "noComics":"Çizgi roman yok"
+    }
+}

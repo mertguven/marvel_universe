@@ -1,0 +1,14 @@
+{
+    "somethingWentWrong": "Something went wrong! Try again!",
+    "error":"Error",
+    "pageNotFound":"The Page Not Found",
+    "characters":{
+        "characterName": "Character Name"
+    },
+    "characterDetail":{
+        "description":"Description",
+        "noDescription":"No description",
+        "comics":"Comics",
+        "noComics":"No comics"
+    }
+}
