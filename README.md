@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/mertguven/marve_universe">
-    <img src="assets/images/logoWithBg.png" alt="Logo" width="30%">
+    <img src="assets/images/logoWithBg.png" alt="Logo" width="50%">
   </a>
 
   <h1 align="center">Marvel Universe</h1>
