@@ -20,6 +20,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#built-with">Built With</a></li>
+    <li><a href="#screenshots">Screenshots</a></li>
     <li><a href="#project-structure">Project Structure</a></li>
     <li><a href="#packages">Packages</a></li>
     <li><a href="#design-pattern">Design Pattern</a></li>
@@ -37,6 +38,19 @@
 * [Flutter](https://flutter.dev/)
 * [Dart](https://dart.dev/)
 * [Marvel API](https://developer.marvel.com/docs)
+
+
+<div id="screenshots"></div>
+
+## Screenshots
+
+<p align='center'>
+    <img src="screenshots/splash_mockup.png" width="19%" title="Splash"/>
+    <img src="screenshots/characters_mockup_light.png" width="19%" title="Characters Light"/>
+    <img src="screenshots/characters_mockup_dark.png" width="19%" title="Characters Dark"/>
+    <img src="screenshots/character_detail_mockup_light.png" width="19%" title="Character Detail Light"/>
+    <img src="screenshots/character_detail_mockup_dark.png" width="19%" title="Character Detail Dark"/>
+</p>
 
 <div id="project-structure"></div>
 
