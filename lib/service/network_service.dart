@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:dio/dio.dart';
 import 'package:marvel_universe/controller/interfaces/character_detail_base.dart';
 import 'package:marvel_universe/controller/interfaces/characters_base.dart';

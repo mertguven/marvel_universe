@@ -7,9 +7,12 @@ import 'package:marvel_universe/core/helper/app_router.dart';
 import 'package:marvel_universe/core/theme/app_theme.dart';
 import 'package:marvel_universe/cubit/character_detail/character_detail_cubit.dart';
 import 'package:marvel_universe/cubit/characters/characters_cubit.dart';
+// ignore: depend_on_referenced_packages
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   await EasyLocalization.ensureInitialized();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
       .then((_) {
