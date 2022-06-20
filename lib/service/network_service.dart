@@ -9,10 +9,7 @@ import 'package:marvel_universe/model/detail/character_comics_request_model.dart
 import 'package:marvel_universe/model/detail/character_comics_response_model.dart';
 
 class NetworkService implements CharactersBase, CharacterDetailBase {
-  NetworkService._();
-  static final NetworkService instance = NetworkService._();
-
-  var dio = Dio();
+  final _dio = Dio();
 
   final Map<String, dynamic> _queryParameters = {
     "ts": 1,
@@ -30,7 +27,7 @@ class NetworkService implements CharactersBase, CharacterDetailBase {
       CharactersRequestModel model) async {
     try {
       const int limit = 30;
-      var response = await dio.get(
+      var response = await _dio.get(
         GlobalVariables.url("?offset=${model.offset}&limit=$limit"),
         queryParameters: _queryParameters,
       );
@@ -50,7 +47,7 @@ class NetworkService implements CharactersBase, CharacterDetailBase {
           "2005-01-01%2C${dateTime.year}-${dateTime.month}-${dateTime.day}";
       const String orderBy = "-modified";
       const int limit = 10;
-      var response = await dio.get(
+      var response = await _dio.get(
         GlobalVariables.url(
             "/${model.id}/comics?dateRange=$dateRange&orderBy=$orderBy&limit=$limit"),
         queryParameters: _queryParameters,

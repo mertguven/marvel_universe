@@ -12,7 +12,9 @@ dependencies:
   flutter:
     sdk: flutter
 
+  #CORE 
   cupertino_icons: ^1.0.2
+  equatable: ^2.0.3
   # NETWORK
   dio: ^4.0.6
   # STATE MANAGEMENT

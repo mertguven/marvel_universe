@@ -8,9 +8,7 @@ part of 'character_comics_request_model.dart';
 
 CharacterComicsRequestModel _$CharacterComicsRequestModelFromJson(
         Map<String, dynamic> json) =>
-    CharacterComicsRequestModel(
-      id: json['id'] as int?,
-    );
+    CharacterComicsRequestModel(json['id'] as int);
 
 Map<String, dynamic> _$CharacterComicsRequestModelToJson(
         CharacterComicsRequestModel instance) =>

@@ -3,17 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:marvel_universe/core/constants/app_constants.dart';
+import 'package:marvel_universe/core/helper/app_init.dart';
 import 'package:marvel_universe/core/helper/app_router.dart';
 import 'package:marvel_universe/core/theme/app_theme.dart';
-import 'package:marvel_universe/cubit/character_detail/character_detail_cubit.dart';
-import 'package:marvel_universe/cubit/characters/characters_cubit.dart';
-// ignore: depend_on_referenced_packages
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 Future<void> main() async {
-  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-  await EasyLocalization.ensureInitialized();
+  await AppInit().appInitial();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
       .then((_) {
     runApp(
@@ -32,11 +27,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: [
-        BlocProvider<CharactersCubit>(create: (_) => CharactersCubit()),
-        BlocProvider<CharacterDetailCubit>(
-            create: (_) => CharacterDetailCubit()),
-      ],
+      providers: AppConstants.multiProviders,
       child: MaterialApp(
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,

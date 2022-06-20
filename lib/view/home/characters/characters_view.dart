@@ -64,7 +64,7 @@ class _CharactersViewState extends State<CharactersView> {
           } else if (state is CharactersLoadingState) {
             return ListView.separated(
               shrinkWrap: true,
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+              padding: context.p10,
               itemCount: 10,
               separatorBuilder: (context, index) => const SizedBox(height: 20),
               physics: const NeverScrollableScrollPhysics(),
@@ -97,7 +97,7 @@ class _CharactersViewState extends State<CharactersView> {
           children: [
             ListView.separated(
               shrinkWrap: true,
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+              padding: context.p10,
               itemCount: characterList.length,
               separatorBuilder: (context, index) => const SizedBox(height: 20),
               physics: const NeverScrollableScrollPhysics(),
@@ -109,7 +109,7 @@ class _CharactersViewState extends State<CharactersView> {
                   borderRadius: BorderRadius.circular(20),
                   child: Container(
                       height: context.screenHeight * 0.15,
-                      padding: const EdgeInsets.only(right: 10),
+                      padding: context.por10,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         color: Theme.of(context)
@@ -130,9 +130,9 @@ class _CharactersViewState extends State<CharactersView> {
             ),
             Visibility(
               visible: !gotTheWholeList,
-              child: const Padding(
-                padding: EdgeInsets.all(10),
-                child: ListTileLoadingWidget(),
+              child: Padding(
+                padding: context.p10,
+                child: const ListTileLoadingWidget(),
               ),
             ),
           ],

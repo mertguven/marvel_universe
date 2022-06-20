@@ -17,7 +17,6 @@ class ListTileLoadingWidget extends StatelessWidget {
   Container _modelContainer(BuildContext context) {
     return Container(
       height: context.screenHeight * 0.15,
-      padding: const EdgeInsets.only(right: 10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: Theme.of(context).colorScheme.primary.withOpacity(0.1),

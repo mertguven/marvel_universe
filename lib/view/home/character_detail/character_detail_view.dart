@@ -34,7 +34,7 @@ class _CharacterDetailViewState extends State<CharacterDetailView> {
   Future<void> _fetchComics() async {
     context
         .read<CharacterDetailCubit>()
-        .fetchCharacterComics(CharacterComicsRequestModel(id: character.id));
+        .fetchCharacterComics(CharacterComicsRequestModel(character.id!));
   }
 
   @override
@@ -65,8 +65,7 @@ class _CharacterDetailViewState extends State<CharacterDetailView> {
           child: Container(
             width: double.infinity,
             height: context.screenHeight * 0.5,
-            padding:
-                const EdgeInsets.only(left: 10, right: 10, top: 20, bottom: 10),
+            padding: context.p10,
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.secondary,
               borderRadius: const BorderRadius.only(
@@ -106,7 +105,7 @@ class _CharacterDetailViewState extends State<CharacterDetailView> {
                                       children: [
                                         _comicsWidget(),
                                         Padding(
-                                          padding: const EdgeInsets.all(8.0),
+                                          padding: context.p10,
                                           child: Text(
                                               state.model.attributionText ??
                                                   ""),
@@ -136,7 +135,7 @@ class _CharacterDetailViewState extends State<CharacterDetailView> {
   GridView _loadingGrid() {
     return GridView.builder(
       shrinkWrap: true,
-      padding: EdgeInsets.zero,
+      padding: context.p0,
       physics: const NeverScrollableScrollPhysics(),
       itemCount: 10,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -150,7 +149,7 @@ class _CharacterDetailViewState extends State<CharacterDetailView> {
   GridView _comicsWidget() {
     return GridView.builder(
       shrinkWrap: true,
-      padding: EdgeInsets.zero,
+      padding: context.p0,
       physics: const NeverScrollableScrollPhysics(),
       itemCount: comicsList.length,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -164,14 +163,11 @@ class _CharacterDetailViewState extends State<CharacterDetailView> {
                   comicsList[index].thumbnail!.extension!),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10),
-            child: Text(comicsList[index].title!,
-                textAlign: TextAlign.center,
-                maxLines: 3,
-                overflow: TextOverflow.ellipsis,
-                style: const TextStyle(fontWeight: FontWeight.bold)),
-          ),
+          Text(comicsList[index].title!,
+              textAlign: TextAlign.center,
+              maxLines: 3,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(fontWeight: FontWeight.bold)),
         ],
       ),
     );
@@ -208,7 +204,7 @@ class _CharacterDetailViewState extends State<CharacterDetailView> {
       );
 
   Widget _titleTextWidget(String text) => Padding(
-        padding: const EdgeInsets.symmetric(vertical: 20),
+        padding: context.pv20,
         child: Text(
           text,
           style: Theme.of(context).textTheme.labelMedium,
