@@ -131,9 +131,9 @@ The design pattern of the project is [MVC](https://en.wikipedia.org/wiki/Model�
   <p>It's the section where the custom widgets used throughout the project are located.</p>
 <b>cubit/ :</b>
   <p>It's the section where the state management of the project is located.</p>
-<b>model :</b>
+<b>model/ :</b>
   <p>It's the project section where the models of the data coming from the Marvel API are located.</p>
-<b>data/service :</b>
+<b>data/service/ :</b>
   <p>It's the part that communicates with the Marvel API.</p>
 <b>presentation/ :</b>
   <p>It's the presentation layer of the project.</p>
@@ -172,6 +172,6 @@ SOFTWARE.
 
 ## Contact
 
-* Mert Güven - [mertguven.com](http://mertguven.com/#/) - mertguven789@gmail.com
+* Mert Güven - [mertguven.net](https://mertguven.net/) - info@mertguven.net
 
 <p align="right"><a href="#top">⬆️</a></p>
