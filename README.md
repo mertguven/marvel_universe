@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/mertguven/marve_universe">
+  <a href="https://github.com/mertguven/marvel_universe">
     <img src="assets/images/logoWithBg.png" alt="Logo" width="50%">
   </a>
 
